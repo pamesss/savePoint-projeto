@@ -1,0 +1,241 @@
+:root {
+    --fundo: rgb(054,054,054);
+    --branco: #ffffff;
+    --rosa: #e73a59;
+    --rosa-escuro: #a1283e;
+    --amarelo: #f5cd00;
+    --laranja: #f48236;
+}
+* { 
+    margin: 0; padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+body { 
+    font-family: sans-serif;
+    background-color: var(--fundo);  
+}
+.title {
+    font-size: 2em;
+    color: var(--amarelo);
+    text-align: center;
+    font-weight: 700;
+}
+.btn_style {
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: var(--branco);
+}
+.logo {
+    width: 200px;
+    margin: 20px 10px;
+}
+footer {
+    border-top: 1px solid var(--branco);
+    padding: 15px;
+    text-align: center;
+    color: var(--branco);
+    bottom: 0px;
+    width: 100%;
+}
+
+.github_link:link,.github_link:visited {
+    color: var(--rosa);
+}
+
+.close { display: none !important; }
+.open { display: flex !important;}
+#function_table, #function_name, #function_order, #function_print {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* HOME - MESAS */
+.tables_style {
+    padding: 0px 30px;   
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 20px;
+}
+.btn_table {
+    background-color: var(--rosa);
+    border-bottom: 5px var(--rosa-escuro) solid;
+} .btn_table:hover { 
+    cursor:pointer; 
+    filter: brightness(70%);
+    border-bottom: none;
+}
+
+/* NOME DO CLIENTE */
+
+#input_nomeCliente {
+    margin-top: 100px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    padding: 20px 30px;
+    font-weight: 500 !important;
+    color: #000000;
+}
+.btn_nomeCliente {
+    font-size: 1.2em;
+    padding: 20px 40px;
+    background-color: var(--amarelo);
+    border-bottom: 5px var(--laranja) solid;
+} .btn_nomeCliente:hover { 
+    cursor:pointer; 
+    filter: brightness(70%);
+    border-bottom: none;
+}
+
+
+/*CARDAPIO*/
+#categoryFilter {
+    margin: 0px 30px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    width: 85%;
+    padding: 20px 30px;
+    font-weight: 500 !important;
+    
+}
+
+.list_container {
+    color: var(--branco);
+    background-color: var(--rosa);
+    border-bottom: 1px solid var(--branco);
+    
+    padding: 20px;
+    margin: 0px 30px;
+}
+.list_container:first-of-type {
+    border-radius: 12px 12px 0px 0px;
+} 
+.list_container:last-of-type {
+    border-radius: 0px 0px 12px 12px;
+}
+
+.list_container:active {
+    background-color: var(--rosa-escuro);
+}
+.list_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list_box span:first-of-type {
+    flex: 50%;
+}
+.list_box span:last-of-type {
+    text-align: end;
+    float: right;
+}
+.hidden_content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+  }
+  
+.hidden_content.show {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 20px 20px 0px;
+    opacity: 1;
+    max-height: calc(100% + 60px);
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+.hidden_content p { word-break: break-word; }
+
+.listMenuDescription input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+.listMenuDescription input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    border: 0px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+.listMenuDescription input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 16px;
+    border: solid var(--amarelo);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 6px;
+}
+#function_order {
+    padding-bottom: 100px;
+}
+.btn_irParaJanelaFinal {
+    z-index: 9999;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--branco);
+    border-radius: 12px 12px 0px 0px;
+    background-color: var(--amarelo);
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0px;
+} .btn_irParaJanelaFinal:hover { 
+    cursor:pointer; 
+    filter: brightness(70%);
+}
+
+/*IMPRIMIR*/
+#order-output {
+    min-width: 70vw;
+    font-size: 1.2em;
+    margin-top: 60px;
+    border-radius: 12px;
+    border: 5px solid var(--rosa);
+    padding: 30px 20px;
+    background-color: var(--branco);
+}
+#btn_copy, #reset-button {
+    background-color: var(--amarelo);
+    border-bottom: 5px var(--laranja) solid;
+} #btn_copy:hover, #reset-button:hover { 
+    cursor:pointer; 
+    filter: brightness(70%);
+    border-bottom: none;
+}
+
+.order_confirm.open {
+    flex-direction: column; 
+    align-items: center;
+    gap: 50px;
+    margin: 25vh 30px 0px;
+}
+.order_message {
+    text-align: center;
+    font-weight: 800;
+    color: var(--amarelo);
+    font-size: 2em;
+
+}

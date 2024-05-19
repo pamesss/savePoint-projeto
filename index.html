@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Save Point - Atendimento</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="./assets/images.jpg" />
+  </header>
+  <section id="function_table">
+    <h1 class="title">MESAS</h1>
+    <div id="buttons_container" class="tables_style">
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 01">
+        01
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 02">
+        02
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 03">
+        03
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 04">
+        04
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 05">
+        05
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 06">
+        06
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 07">
+        07
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 08">
+        08
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 09">
+        09
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 10">
+        10
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 11">
+        11
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 12">
+        12
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 13">
+        13
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 14">
+        14
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 15">
+        15
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 16">
+        16
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 17">
+        17
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 18">
+        18
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 19">
+        19
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 20">
+        20
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 21">
+        21
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 22">
+        22
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 23">
+        23
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 24">
+        24
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 25">
+        25
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 26">
+        26
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Mesa 27">
+        27
+      </button>
+      <button type="button" class="table_number btn_table btn_style" value="Estúdio SET">
+        SET
+      </button>
+    </div>
+  </section>
+
+  <section id="function_name">
+    <h2 class="title">NOME DO CLIENTE</h2>
+
+    <input type="text" id="input_nomeCliente" placeholder="Insira o nome do cliente" />
+    <button type="submit" id="input_submit" class="btn_nomeCliente btn_style">
+      Continuar
+    </button>
+  </section>
+
+  <section id="function_order">
+    <h2 class="title">CARDÁPIO</h2>
+
+    <select id="categoryFilter">
+      <option value="Burger">Burger</option>
+      <option value="Porção">Porção</option>
+      <option value="Pizza">Pizza</option>
+      <option value="Outros">Outros</option>
+      <option value="Drinks">Drinks</option>
+    </select>
+
+    <div id="data-output"></div>
+
+    <button class="btn_irParaJanelaFinal">Finalizar pedido</button>
+  </section>
+
+  <section id="function_print">
+
+    <h2 class="title">REVISÃO DO PEDIDO</h2>
+    <div id="order-output"></div>
+    <button id="btn_copy" class="btn_style">Copiar pedido</button>
+  </section>
+
+  <div id="order_confirmation" class="order_confirm">
+    <p class="order_message">Pedido copiado!</p>
+    <button id="reset-button" class="btn_style">Fazer outro pedido</button>
+  </div>
+  <footer class="rodape" style="position: absolute;">
+    <p>Código feito por <a class="github_link" href="https://github.com/pamesss">@pamesss</a></p>
+  </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+       const sectionsToClose = document.querySelectorAll('#function_name, #function_order, #function_print, #order_confirmation');
+       sectionsToClose.forEach(section => {
+         section.classList.add('close');
+       });
+     });
+     
+    var pedido = {
+      mesa_num: "",
+      cliente_nome: "",
+      pedido_lista: [],
+    };
+
+    /*PASSO 1 - ARMAZENAR O NUMERO DA MESA */
+    const buttonsContainer = document.getElementById("buttons_container");
+    const buttons = document.querySelectorAll(".table_number");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", function (event) {
+        pedido.mesa_num = event.target.value;
+        localStorage.setItem("mesa_num", event.target.value);
+        console.log("Pedido atual:", pedido);
+
+        //esconde esse menu e mostra o próximo
+        document.getElementById("function_table").classList.add("close");
+        document.getElementById("function_name").classList.add("open");
+      });
+    });
+
+    /*PASSO 2 - ARMAZENAR O NOME DO CLIENTE*/
+    let nameInput = document.getElementById("input_nomeCliente");
+    let nameSubmit = document.getElementById("input_submit");
+    nameSubmit.addEventListener("click", function (event) {
+      event.preventDefault();
+      const userName = nameInput.value;
+      pedido.cliente_nome = userName;
+      localStorage.setItem("cliente_nome", userName);
+      console.log("Pedido atual:", pedido);
+
+      //esconde esse menu e mostra o próximo
+      document.getElementById("function_name").classList.remove("open");
+      document.getElementById("function_name").classList.add("close");
+      document.getElementById("function_order").classList.add("open");
+      document.querySelector(".rodape").style.position = "relative";
+    });
+
+    /*PASSO 3 - FUNCIONALIDADE DO CARDÁPIO*/
+    const listContainer = document.querySelector("#data-output");
+    const categoryFilter = document.getElementById("categoryFilter");
+    let dataCache = [];
+    const checkboxStates = {};
+    function renderItems(data) {
+      listContainer.innerHTML = "";
+      data.forEach((item) => {
+        const isChecked = checkboxStates[item.id] ? "checked" : "";
+        listContainer.insertAdjacentHTML(
+          "beforeend",
+          `
+                  <div class="list_container" data-category="${item.categoria}">
+                    <div class="list_box">
+                      <span style="font-weight: bolder;">${item.nome}</span>
+                      <span>${item.valor}</span>
+                    </div>
+                    <div class="hidden_content listMenuDescription">
+                      <p>${item.descricao}</p>
+                      <input type="checkbox" id="${item.nome}_${item.id}" name="${item.nome}" value="${item.nome}" ${isChecked}>
+                    </div>
+                  </div>`
+        );
+      });
+
+      // Add event listeners to .list_box elements
+      document.querySelectorAll(".list_box").forEach((box) => {
+        box.addEventListener("click", function () {
+          const hiddenContent = this.nextElementSibling;
+          if (hiddenContent.classList.contains("show")) {
+            hiddenContent.classList.remove("show");
+            setTimeout(() => {
+              hiddenContent.style.display = "none";
+            }, 500);
+          } else {
+            hiddenContent.style.display = "flex";
+            setTimeout(() => {
+              hiddenContent.classList.add("show");
+            }, 0);
+          }
+        });
+      });
+
+      document.querySelectorAll('input[type="checkbox"]')
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            const id = this.id.split("_")[1];
+            checkboxStates[id] = this.checked;
+
+            if (this.checked) {
+              pedido.pedido_lista.push({ id, nome: this.value });
+            } else {
+              pedido.pedido_lista = pedido.pedido_lista.filter(
+                (item) => item.id !== id
+              );
+            }
+
+            console.log("Current pedido:", pedido);
+          });
+        });
+    }
+
+    function filterItems(category) {
+      if (category === "All") {
+        renderItems(dataCache);
+      } else {
+        const filteredData = dataCache.filter(
+          (item) => item.categoria === category
+        );
+        renderItems(filteredData);
+      }
+    }
+
+    fetch("./savepointcardapio.json")
+      .then((response) => response.json())
+      .then((data) => {
+        dataCache = data;
+        renderItems(dataCache);
+      })
+      .catch((error) => console.error("Error fetching JSON data:", error));
+
+    categoryFilter.addEventListener("change", function () {
+      filterItems(this.value);
+    });
+      
+
+    /*PASSO 4 - IMPRIMIR NA TELA E COPIAR */
+    document.querySelector('.btn_irParaJanelaFinal').addEventListener("click", function() {
+    //esconde esse menu e mostra o próximo
+    document.getElementById("function_order").classList.remove("open");
+    document.getElementById("function_order").classList.add("close");
+    document.getElementById("function_print").classList.add("open");
+    document.querySelector(".rodape").style.position = "absolute";
+
+    //carrega o display
+    const mesaNumero = pedido.mesa_num;
+    const mesaCliente = pedido.cliente_nome;
+    const mesaPedido = pedido.pedido_lista;
+    const pedidoJanela = document.getElementById('order-output');
+
+    /*imprime o pedido pro atendente conferir*/
+    pedidoJanela.innerHTML = `
+        <p>${pedido.mesa_num}</p>
+        <p>Comanda: ${pedido.cliente_nome}</p><br>
+        <p>Pedido: </p>`;
+
+    for (let i = 0; i < pedido.pedido_lista.length; i++) {
+        pedidoJanela.innerHTML += `<span>${pedido.pedido_lista[i].nome}</span><br>`;
+    }
+});
+    function copyToClipboard() {
+        const pedidoJanela = document.getElementById('order-output');
+        const textArea = document.createElement('textarea');
+
+        // Set the value of the text area to the inner text of pedidoJanela
+        textArea.value = pedidoJanela.innerText.replace(/\n\n/g, '\n');
+
+        // Append the text area to the document body
+        document.body.appendChild(textArea);
+
+        // Select the text inside the text area
+        textArea.select();
+
+        // Copy the selected content to the clipboard
+        document.execCommand('copy');
+
+        // Remove the text area from the document body
+        document.body.removeChild(textArea);
+        document.getElementById("function_print").classList.remove("open");
+        document.getElementById("function_print").classList.add("close");
+        document.getElementById("order_confirmation").classList.remove("close");
+        document.getElementById("order_confirmation").classList.add("open");
+        
+
+    }
+    const btnCopy = document.getElementById('btn_copy');
+    btnCopy.addEventListener('click', copyToClipboard);
+    const btnReset = document.getElementById('reset-button'); 
+    btnReset.addEventListener('click', function(){
+    location.reload();
+  });
+  </script>
+</body>
+
+</html>

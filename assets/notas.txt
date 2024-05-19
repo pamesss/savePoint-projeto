@@ -1,0 +1,31 @@
+﻿passo a passo
+
+1) numero da mesa
+grid com os numeros das mesas//mesa (01-30) number input
+set tattoos airsoft
+cada botão tem uma valor string como:
+'Mesa 01' 'Estudio SET' 
+
+e vai pra proxima pagina
+
+
+2) nome do cliente
+input do nome
+armazenar o valor com o nome do cliente
+let nomeCliente
+clicar em "continuar"
+
+3) itens do cardapio
+burguers /porçoes / drinks / sobremesas
+
+id - nome - valor - descrição - adicionais
+
+loop for
+i = 0
+valor[i] = item selecionado
+i++
+
+
+4) copia a mensagem
+
+5) reseta as variaveis

@@ -1,0 +1,233 @@
+﻿[
+    {
+        "id": "1",
+        "nome": "Doflamingo",
+        "valor": " R$ 50.00 ",
+        "descricao": "Camarão rosa empanado, cream cheese, tarê, nori cortado, no pão brioche rosa. Acompanha 100g de batata frita.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "2",
+        "nome": "Toguro",
+        "valor": " R$ 42.00 ",
+        "descricao": "120g blend de fraldinha, queijo prato empanado, alface, maionese verde no pão de gergelim. Acompanha 100g de batata frita.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "3",
+        "nome": "Rainha de Copas",
+        "valor": " R$ 37.00 ",
+        "descricao": "120g blend de fraldinha, queijo prato, geléia de bacon, alface e maionese verde no pão de gergelim.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "4",
+        "nome": "Scar",
+        "valor": " R$ 25.00 ",
+        "descricao": "80g de mignon suíco desfiado cozido na cerveja, cebola caramelizado no shoyu e cheddar no pão australiano.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "5",
+        "nome": "NPC",
+        "valor": " R$ 20.00 ",
+        "descricao": "Smash 80g com queijo mussarela no pão brioche.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "6",
+        "nome": "Dr. Robotinik",
+        "valor": " R$ 39.00 ",
+        "descricao": "Dois smashs de 80g, cheedar e bacon a cada camada, cebola roxa, no pão brioche. Acompanha 100g de batata frita.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "7",
+        "nome": "Prof. Moriaty",
+        "valor": " R$ 37.00 ",
+        "descricao": "60g de shimeji, mussarela, sour cream, onion rings, tomate e alface no pão de gergelim.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "8",
+        "nome": "X-Charada",
+        "valor": " R$ 34.00 ",
+        "descricao": "120g de blend de fraldinha, queijo prato, alface, tomate, cebola roxa, molho mostarda e mel no pão de gergelim.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "9",
+        "nome": "Gus Fring",
+        "valor": " R$ 25.00 ",
+        "descricao": "120g de filé de frango empanado. Sour cream, bacon, molho de mostarda e mel no pão brioche.",
+        "categoria": "Burger"
+    },
+    {
+        "id": "10",
+        "nome": "Lenda do Terror",
+        "valor": " M R$ 48,00 <br> G R$ 80,00 ",
+        "descricao": "Porção de frango a parmegiana com batata frita.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "11",
+        "nome": "Pedaços de Sanidade",
+        "valor": " M R$ 21,00 <br> G R$ 42,00 ",
+        "descricao": "Porção de mandioca, polenta ou batata com molho ketchup.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "12",
+        "nome": "Yellow King",
+        "valor": " M R$ 45,00 <br> G R$ 70,00 ",
+        "descricao": "Batata frita c/ cobertura de cheedar, provolone mussarela e gorgonzola amarela (corante alimentício) por cima.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "13",
+        "nome": "A cor que caiu do céu",
+        "valor": " M R$ 42,00 <br> G R$ 65,00 ",
+        "descricao": "Batata frita crocante com pernil cozido na cerveja preta e molho de tomate com molho gorgonzola azul (corante alimentício) por cima.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "14",
+        "nome": "Clássico do Terror",
+        "valor": " M R$ 45,00 <br> G R$ 75,00 ",
+        "descricao": "Porção tradicional de frango com batata frita.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "15",
+        "nome": "Gatos de Ulthar",
+        "valor": " M R$ 50,00 <br> G R$ 89,00 ",
+        "descricao": "Calabresa em rodelas com cebola chapeada acompanhando torradas com molho pesto e mandioca. Polenta ou batata a sua escolha.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "16",
+        "nome": "Sussuro na Escuridão",
+        "valor": " M R$ 48,00 <br> G R$ 75,00 ",
+        "descricao": "Mandioca com mignon suíno com molho de alho e provolone derretido. Acompanhado de batata frita crocante",
+        "categoria": "Porção"
+    },
+    {
+        "id": "17",
+        "nome": "Crias de Dragon",
+        "valor": " M R$ 70,00 <br> G R$ 130,00 ",
+        "descricao": "Tradicional isca de peixe com um empanamento temperado e crocante. Acompanhado de batata frita.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "18",
+        "nome": "Asilo Arkham",
+        "valor": " M R$ 42,00 <br> G R$ 65,00 ",
+        "descricao": "Batata frita crocante com molho cheedar artesanal e bacon em cubos crocantes.",
+        "categoria": "Porção"
+    },
+    {
+        "id": "19",
+        "nome": "Pizza de Calabresa",
+        "valor": " R$ 26.00 ",
+        "descricao": "Pizza individual.",
+        "categoria": "Pizza"
+    },
+    {
+        "id": "20",
+        "nome": "Pizza de Mussarela",
+        "valor": " R$ 26.00 ",
+        "descricao": "Pizza individual.",
+        "categoria": "Pizza"
+    },
+    {
+        "id": "21",
+        "nome": "Pizza de Shimeji c/ cream cheese",
+        "valor": " R$ 28.00 ",
+        "descricao": "Pizza individual.",
+        "categoria": "Pizza"
+    },
+    {
+        "id": "22",
+        "nome": "Pizza de Frango c/ cream cheese",
+        "valor": " R$ 28.00 ",
+        "descricao": "Pizza individual.",
+        "categoria": "Pizza"
+    },
+    {
+        "id": "23",
+        "nome": "Pastéis de Lovecraft",
+        "valor": "-",
+        "descricao": "1 sabor --- R$ 12,00 <br> 2 ou 3 sabores --- R$ 15,00 Sabores: Calabresa; Frango; Pernil; Shimeji; Mussarela; Provolone; Cream Cheese; Gorgonzola",
+        "categoria": "Outros"
+    },
+    {
+        "id": "24",
+        "nome": "Potion: Molho Verde",
+        "valor": " R$ 7.00 ",
+        "descricao": "Maionese de ervas e alho artesanal.",
+        "categoria": "Outros"
+    },
+    {
+        "id": "25",
+        "nome": "Potion: Molho Mostarda e Mel",
+        "valor": " R$ 7.00 ",
+        "descricao": "Emulsão de mostarda e mel cremosa.",
+        "categoria": "Outros"
+    },
+    {
+        "id": "26",
+        "nome": "Potion: Molho Picante",
+        "valor": " R$ 7.00 ",
+        "descricao": "Creme de pimenta dedo de moça, páprica picante e pimenta cayena.",
+        "categoria": "Outros"
+    },
+    {
+        "id": "27",
+        "nome": "Adicional: 200g de batata frita",
+        "valor": " R$ 9.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "28",
+        "nome": "Adicional: Mussarela",
+        "valor": " R$ 8.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "29",
+        "nome": "Adicional: Gorgonzola",
+        "valor": " R$ 9.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "30",
+        "nome": "Adicional: Cheddar",
+        "valor": " R$ 9.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "31",
+        "nome": "Adicional: Pernil",
+        "valor": " R$ 9.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "32",
+        "nome": "Adicional: Bacon",
+        "valor": " R$ 8.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    },
+    {
+        "id": "33",
+        "nome": "Adicional: Shimeji",
+        "valor": " R$ 10.00 ",
+        "descricao": "-",
+        "categoria": "Outros"
+    }
+]
